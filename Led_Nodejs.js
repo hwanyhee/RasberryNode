@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
 var bodyParser = require('body-parser');
-//var GPIO = require('onoff').Gpio;
-//led = new GPIO(17, 'out') ;
+var GPIO = require('onoff').Gpio;
+led = new GPIO(17, 'out') ;
 
 
 var app = express();
