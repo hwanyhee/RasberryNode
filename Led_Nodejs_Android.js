@@ -37,7 +37,7 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 	}
 	console.log(util.format('%s:%s',state,led.readSync(0)?'on':'off'));
 	
-	//resp.send(util.format('%s:%s',state,led.readSync(0)?'on':'off'));	
+	resp.send(util.format('%s:%s',state,led.readSync(0)?'on':'off'));	
 		
 	
 });
