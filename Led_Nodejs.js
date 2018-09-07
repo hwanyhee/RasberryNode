@@ -58,7 +58,7 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 		}
 	}
 	
-	var obj ={title:state.toUpperCase()}
+	var obj ={title:'LED:'+state.toUpperCase()}
 
         resp.render('Led_Nodejs',obj,function(err, html){
 		if(err){
