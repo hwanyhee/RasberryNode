@@ -14,7 +14,7 @@ var router = express.Router();
 router.route('/ledcontrol/:action').get(function(req,resp){
 
 	var state=req.params.action;
-
+	console.log('state:',state);
 	if (state == 'on') {
  		led.writeSync(1) ;
  	}
@@ -34,7 +34,7 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 			led.writeSync(0);
 		}
 	}
-	
+	console.log(util.format('%s:%s',state,led.readSync(0)?'on':'off'));
 	
 	//resp.send(util.format('%s:%s',state,led.readSync(0)?'on':'off'));	
 		
