@@ -23,7 +23,7 @@ router.route('/index').get(function(req,resp){
 	
 	resp.render('Led_Nodejs',{title:'LED Control'},function(err, html){
 		if(err){
-		resp.set('200',{'Content-Type':'text/html;charset=UTF-8'});
+			resp.set('200',{'Content-Type':'text/html;charset=UTF-8'});
 			resp.write('<h2>뷰 렌더링중 오류발생</h2>');
 			resp.write('에러 : '+err);
 			resp.end();
@@ -58,9 +58,10 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 		}
 	}
 	
-	var obj ={title:'LED:'+state.toUpperCase()}
+	var obj ={title:'LED:'+	state.toUpperCase()}
 
         resp.render('Led_Nodejs',obj,function(err, html){
+        	
 		if(err){
 			resp.set('200',{'Content-Type':'text/html;charset=UTF-8'});
 			resp.write('<h2>뷰 렌더링중 오류발생</h2>');
