@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
 var bodyParser = require('body-parser');
-var GPIO = require('onoff').Gpio;
-led = new GPIO(17, 'out') ;
+//var GPIO = require('onoff').Gpio;
+//led = new GPIO(17, 'out') ;
 
 
 var app = express();
@@ -37,7 +37,7 @@ router.route('/index').get(function(req,resp){
 router.route('/ledcontrol/:action').get(function(req,resp){
 
 	var state=req.params.action;
-	
+
 	if (state == 'on') {
  		led.writeSync(1) ;
  	}
@@ -57,6 +57,7 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 			led.writeSync(0);
 		}
 	}
+	
 	var obj ={title:state.toUpperCase()}
 
         resp.render('Led_Nodejs',obj,function(err, html){
@@ -69,6 +70,7 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 		}
 		resp.end(html);
 	});
+
 	
 });
 

@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>ejs템플릿 03</title>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>Bootstarp</title>
 	<meta charset="utf-8" />
    
 </head>
 <body>
-	<h2><%=title%></h2>
-	<button onclick="location.href='/ledcontrol/on'">ON</button>
-	<button onclick="location.href='/ledcontrol/off'">OFF</button>
-	<button onclick="location.href='/ledcontrol/toggle'">TOGGLE</button>
+	<div class="jumbotron">
+	
+  		<h1>RaspberryPi : LED Control!</h1>
+ 		
+	</div>
+	<div class="container">
+   			<h2><%=title%></h2>
+				<button class="btn btn-success" onclick="location.href='/ledcontrol/on'">ON</button>
+				<button class="btn btn-success" onclick="location.href='/ledcontrol/off'">OFF</button>
+				<button class="btn btn-success" onclick="location.href='/ledcontrol/toggle'">TOGGLE</button>
+  		</div>
+	
 </body>
 </html>
 
