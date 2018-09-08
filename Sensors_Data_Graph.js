@@ -37,7 +37,7 @@ router.get('/',function(req,resp){
 });
 //센터 데이타 입력요청 처리
 router.get('/insert',function(req,resp){
-	console.log(req.query.temp,req,query.humi);
+	console.log(req.query.temperature,req,query.humi);
 	
 	if(con){
 
