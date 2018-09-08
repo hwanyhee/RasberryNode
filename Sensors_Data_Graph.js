@@ -38,6 +38,7 @@ router.get('/',function(req,resp){
 //센터 데이타 입력요청 처리
 router.get('/insert',function(req,resp){
 	console.log(req.query.temp,req,query.humi);
+	/*
 	if(con){
 
 		con.query('INSERT INTO sensors(temperature,humidity) VALUES(?,?)',[req.query.temp,req,query.humi],function(err,result){
@@ -48,7 +49,7 @@ router.get('/insert',function(req,resp){
 			console.log('입력 성공');			
 		});
 		
-	}
+	}*/
 	
 });
 //센터 데이타 조회후 그래프 그리기
