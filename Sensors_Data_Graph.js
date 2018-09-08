@@ -36,7 +36,7 @@ router.get('/insert',function(req,resp){
 	
 	if(con){
 
-		con.query('INSERT INTO sensors(temperatue,humidity) VALUES(?,?)',[req.query.temp,req.query.humi],function(err,result){
+		con.query('INSERT INTO sensors(temperature,humidity) VALUES(?,?)',[req.query.temp,req.query.humi],function(err,result){
 			if (err) throw err;
 			console.log(result);
 			//result.affectedRows: 입력된 행의 수
@@ -52,7 +52,7 @@ router.get('/graph',function(req,resp){
 	
 	if(con){
 		
-		con.query("SELECT temperatue,humidity  FROM sensors ORDER BY seq DESC LIMIT 0,10",function(err,results){
+		con.query("SELECT temperature,humidity  FROM sensors ORDER BY seq DESC LIMIT 0,10",function(err,results){
 			if (err) throw err;
 			 //※SELECT 쿼리결과는 배열형태로 반환됨
 			 console.log(Array.isArray(results));
