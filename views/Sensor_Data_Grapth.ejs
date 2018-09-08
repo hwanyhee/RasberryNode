@@ -7,13 +7,13 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Temperatue', 'Humidity'],
+          ['Temperature', 'Humidity'],
           <% for(var row in results){ 
           
           	if(row == results.length-1){ %>          
-          	[results[row].temperatue,results[row].humidity ]
+          	[results[row].temperature,results[row].humidity ]
           	<% }else{ %>
-        		[results[row].temperatue,results[row].humidity ],
+        		[results[row].temperature,results[row].humidity ],
 		  <% }
 		  }%>
 		  
