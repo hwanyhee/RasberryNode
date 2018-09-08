@@ -8,12 +8,12 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Temperature', 'Humidity'],
-          <% for(var row in results){ 
+          <% for(var row in sensors){ 
           
-          	if(row == results.length-1){ %>          
-          	[results[row].temperature,results[row].humidity ]
+          	if(row == sensors.length-1){ %>          
+          	[sensors[row].temperature,sensors[row].humidity ]
           	<% }else{ %>
-        		[results[row].temperature,results[row].humidity ],
+        		[sensors[row].temperature,sensors[row].humidity ],
 		  <% }
 		  }%>
 		  
