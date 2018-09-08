@@ -13,9 +13,9 @@
           <% for(var row in sensors){ 
           
           	if(row == sensors.length-1){ %>          
-          	[<%=sensors[row].seq%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ]
+          	[<%=sensors[row].time%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ]
           	<% }else{ %>
-        		[<%=sensors[row].seq%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ],
+        		[<%=sensors[row].time%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ],
 		  <% }
 		  }%>
 		  
