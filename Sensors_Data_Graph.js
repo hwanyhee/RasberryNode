@@ -30,18 +30,13 @@ app.use(bodyParser.json());
 //1.Router 객체 생성
 var router = express.Router();
 
-router.get('/',function(req,resp){
-	
-	console.log('메인:',req.query.name);
-	
-});
 //센터 데이타 입력요청 처리
 router.get('/insert',function(req,resp){
-	console.log(req.query.temperature,req,query.humi);
+
 	
 	if(con){
 
-		con.query('INSERT INTO sensors(temperature,humidity) VALUES(?,?)',[req.query.temp,req,query.humi],function(err,result){
+		con.query('INSERT INTO sensors(temperature,humidity) VALUES(?,?)',[req.query.temp,req.query.humi],function(err,result){
 			if (err) throw err;
 			console.log(result);
 			//result.affectedRows: 입력된 행의 수
