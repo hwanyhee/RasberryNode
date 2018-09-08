@@ -52,7 +52,7 @@ router.get('/graph',function(req,resp){
 	
 	if(con){
 		
-		con.query("SELECT hour(time) time,temperature,humidity  FROM sensors ORDER BY seq DESC LIMIT 0,10",function(err,results){
+		con.query("SELECT seq,temperature,humidity  FROM sensors ORDER BY seq DESC LIMIT 0,10",function(err,results){
 			if (err) throw err;
 			 //※SELECT 쿼리결과는 배열형태로 반환됨
 			 console.log(Array.isArray(results));

@@ -9,13 +9,13 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['번호','온도', '습도'],
+          ['데이타','온도', '습도'],
           <% for(var row in sensors){ 
           
           	if(row == sensors.length-1){ %>          
-          	[<%=sensors[row].time%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ]
+          	[<%=sensors[row].seq%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ]
           	<% }else{ %>
-        		[<%=sensors[row].time%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ],
+        		[<%=sensors[row].seq%>,<%=sensors[row].temperature%>,<%=sensors[row].humidity%> ],
 		  <% }
 		  }%>
 		  
