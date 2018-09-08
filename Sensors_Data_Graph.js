@@ -19,7 +19,7 @@ var con = mysql.createConnection({
 var app = express();
 app.set('port',process.env.PORT || 8080);
 //뷰 템플릿 및 엔진 설정
-app.set('views',path.join(settings.PROJECT_ROOT, 'views'));
+app.set('views',path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //body-parser모듈 등록
