@@ -36,7 +36,7 @@ router.get('/insert',function(req,resp){
 	
 	if(con){
 
-		con.query('INSERT INTO sensors(temp,humidity) VALUES(?,?)',[req.query.temp,req.query.humi],function(err,result){
+		con.query('INSERT INTO sensors(temperatue,humidity) VALUES(?,?)',[req.query.temp,req.query.humi],function(err,result){
 			if (err) throw err;
 			console.log(result);
 			//result.affectedRows: 입력된 행의 수
