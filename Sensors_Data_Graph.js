@@ -29,6 +29,12 @@ app.use(bodyParser.json());
 
 //1.Router 객체 생성
 var router = express.Router();
+
+router.get('/',function(req,resp){
+	
+	console.log('메인');
+	
+});
 //센터 데이타 입력요청 처리
 router.get('/insert',function(req,resp){
 	console.log(req.query.temp,req,query.humi);
