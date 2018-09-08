@@ -32,7 +32,7 @@ var router = express.Router();
 
 router.get('/',function(req,resp){
 	
-	console.log('메인:',req.query);
+	console.log('메인:',req.query.name);
 	
 });
 //센터 데이타 입력요청 처리
