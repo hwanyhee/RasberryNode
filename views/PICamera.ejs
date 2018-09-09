@@ -8,25 +8,18 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
     <title>PI Camera</title>
+	<style>
 	
+	img { max-width: 100%;height:auto }
+	</style>
 
 </head>
 <body>
 	<div class='jumbotron'>	
   		<h1>RaspberryPi : PI Camera</h1> 		
 	</div>
-	<div class='container'>
-		<video src="http://192.168.0.7:8080/stream" controls width="600" height="400" autoplay>
-        비디오태그를 지원하지 않은 경우<br/>
-        여기를 <a href="http://192.168.0.7:8080/stream">클릭</a>하세요
-    </video>
-    <hr/>
-    <video src="http://192.168.0.7:8080/stream/video.mjpeg" controls width="600" height="400" autoplay>
-        비디오태그를 지원하지 않은 경우<br/>
-        여기를 <a href="http://192.168.0.7:8080/stream/video.mjpeg">클릭</a>하세요
-    </video>
-		<hr/>
-	    <img src='http://192.168.0.7:8080/stream/video.mjpeg' width='600' height='400'/>
+	<div class='container'>		
+	    <img src='http://192.168.0.7:8080/stream/video.mjpeg' />
     </div>
 </body>
 </html>
