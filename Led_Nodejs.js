@@ -49,7 +49,7 @@ router.route('/ledcontrol/:action').get(function(req,resp){
  			  		 message:'집안에 누군가 들어 왔어요'
  		  }
  		}, function(error, response, body){
- 		  console.log(body);
+ 		   console.log(error);
  		});
  		
  	}
