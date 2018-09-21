@@ -49,12 +49,12 @@ router.route('/ledcontrol/:action').get(function(req,resp){
  		  form:    { title: "도둑 침입" ,
  			  		 message:'집안에 누군가 들어 왔어요'
  		  }
- 		}, function(error, response, body){
+ 		}, function(error, response, body){//body는 서버에서 보낸 응답바디 
  			 if (error) {
 				    console.log('error :', error)
 				    return
 			  }
-			  console.log('body :', body)
+			
  		});
  		
  	}
