@@ -41,7 +41,8 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 
 	if (state == 'on') {
  		led.writeSync(1) ;
- 		//안드로이드에 푸쉬  서비스 보내기
+ 		//안드로이드에 푸쉬  서비스 보내기-먼저 npm install request
+ 		
  		
  		request.post({
  		  url:     'http://192.168.0.5:8080/IOTWebService/PushToPhone.jsp',
@@ -49,7 +50,11 @@ router.route('/ledcontrol/:action').get(function(req,resp){
  			  		 message:'집안에 누군가 들어 왔어요'
  		  }
  		}, function(error, response, body){
- 		   console.log(error);
+ 			 if (err) {
+				    console.log('Error :', err)
+				    return
+			  }
+			  console.log(' Body :', body)
  		});
  		
  	}
