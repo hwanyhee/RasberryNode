@@ -1,4 +1,5 @@
 var http = require('http');
+var request = require('request');
 var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
@@ -40,6 +41,17 @@ router.route('/ledcontrol/:action').get(function(req,resp){
 
 	if (state == 'on') {
  		led.writeSync(1) ;
+ 		//안드로이드에 푸쉬  서비스 보내기
+ 		
+ 		request.post({
+ 		  url:     'http://192.168.0.5:8080/IOTWebService/PushToPhone.jsp',
+ 		  form:    { title: "도둑 침입" ,
+ 			  		 message:'집안에 누군가 들어 왔어요'
+ 		  }
+ 		}, function(error, response, body){
+ 		  console.log(body);
+ 		});
+ 		
  	}
  	else if(state=='off') {
  		led.writeSync(0) ;
